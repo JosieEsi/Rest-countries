@@ -1,25 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from "./sectors/Header"
+import Search from './sectors/Search';
 
-function App() {
+
+// Import necessary packages and icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faMoon as solidMoon } from '@fortawesome/free-solid-svg-icons';
+import {faMoon as regularMoon} from '@fortawesome/free-regular-svg-icons';
+
+
+// Add the icons to the library
+library.add(solidMoon, regularMoon);
+
+// ... rest of your code
+
+const App = () => {
+
+  const [countries, setCountries] = useState([]);
+  const handleSearch = (value: string) => {
+    // Implement your search logic here
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <Search 
+        searchCountries={handleSearch} 
+        setCountries={setCountries} 
+        searchInput={``}
+      
+      />
+    </React.Fragment>
+    
+     
   );
 }
 

@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+
+/* DARKMODE */
+.dark-mode{
+  background-color:black;
+  color: white;
+ }
+
+ nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.3rem 5.1rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 3px 3px;
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 3px 3px;
+  /* background-color: rgb(20, 20, 20); */
+ }
+
+ .toggle-light,
+.toggle-dark {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2.8rem 5rem;
+}
+
+.input-block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 30rem;
+  align-items: center;
+}
+
+.select-region {
+  position: relative;
+  border-radius: 10px;
+  width: 11.5rem;
+  height: 30%;
+  padding: 0 0.2rem;
+  -webkit-box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
+  box-shadow: rgb(0 0 0 / 3%) 0px 0px 3px 3px;
+  background-color: var(--white);
+}
